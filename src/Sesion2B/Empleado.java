@@ -23,6 +23,7 @@ public class Empleado {
 		extras=HorasExtras *30;
 		
 		return salarioBase + primas + extras;
+		
 	}
 	
 	
