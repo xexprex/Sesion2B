@@ -39,4 +39,20 @@ class EmpleadoTest {
     public void testCalculoNominaBruta(TipoEmpleado tipo, float ventas, float horas, float esperado) {
         assertEquals(esperado, emp.caculoNominaBruta(tipo, ventas, horas), 0.01);
     }
+    
+    //Test nomina neta
+    @ParameterizedTest
+    @CsvSource({
+    	//NominaBruta , Esperado
+        "2099.99, 		2099.99",
+        "2100, 			1785",
+        "2200, 			1870",
+        "2499.99, 		2124.99",
+        "2500, 			2050",
+        "3000, 			2460",
+        "4000, 			3280"
+    })
+    public void testCalculoNominaNeta(float bruto, float esperado) {
+        assertEquals(esperado, emp.calculoNominaNeta(bruto), 0.01);
+    }
 }
