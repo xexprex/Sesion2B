@@ -34,7 +34,7 @@ class EmpleadoTest {
         "Encargado, 1499, 		0, 		2600",
         "Encargado, 1500, 		0, 		2700",
         "Encargado, 1500, 		1, 		2730",
-        "Encargado, 2000, 		5, 		2800"
+        "Encargado, 2000, 		5, 		2850"
     })
     public void testCalculoNominaBruta(TipoEmpleado tipo, float ventas, float horas, float esperado) {
         assertEquals(esperado, emp.caculoNominaBruta(tipo, ventas, horas), 0.01);
@@ -48,7 +48,7 @@ class EmpleadoTest {
         "2100, 			1785",
         "2200, 			1870",
         "2499.99, 		2124.99",
-        "2500, 			2050",
+        "2500, 		2050",
         "3000, 			2460",
         "4000, 			3280"
     })
